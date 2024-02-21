@@ -1,0 +1,61 @@
+openapi: 3.0.3
+info:
+  title: Django App Builder
+  version: 0.0.0
+paths:
+  /api/app/:
+    get:
+      operationId: api_app_list
+      description: A simple Viewset for viewing all product
+      tags:
+      - api
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/App'
+          description: ''
+components:
+  schemas:
+    App:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 100
+        description:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        created_by:
+          type: integer
+      required:
+      - created_at
+      - created_by
+      - id
+      - name
+      - updated_at
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
