@@ -12,9 +12,9 @@ router.register(r"app", views.AppView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls)),
-    path('api/schema/', SpectacularAPIView.as_view(), name="schema"),
-    path('api/schema/docs/', SpectacularSwaggerView.as_view(url_name='schema')),
+    # path('api/', include(router.urls)),
+    # path('api/schema/', SpectacularAPIView.as_view(), name="schema"),
+    # path('api/schema/docs/', SpectacularSwaggerView.as_view(url_name='schema')),
     path('apps', AppListCreate.as_view(), name= "Create-User-List"),
     path('app/<int:pk>/', AppRetrieveUpdateDelete.as_view(), name='app-Details')
 ]
