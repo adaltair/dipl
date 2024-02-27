@@ -12,6 +12,7 @@ class App(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     updated_at = models.DateTimeField(auto_now=True)
     image = models.ImageField(upload_to='app_images', blank=True, null=True)
+    is_published = models.BooleanField(default=False)
     
     
     def __str__(self):
