@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-v5^g*cenpn-qaw@kuekl9s9(77_$8yr$h!uma(*mb7#a&m1f0b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -86,6 +86,16 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'CLIENT': {
+#             'host': 'localhost', # Replace with your MongoDB server address
+#             'port': 27017,               # Replace with your MongoDB port if different
+#         },
+#         'NAME': 'your_database_name',
+#     }
+# }
 
 
 # Password validation
