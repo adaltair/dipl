@@ -90,12 +90,28 @@ DATABASES = {
 #     'default': {
 #         'ENGINE': 'djongo',
 #         'CLIENT': {
-#             'host': 'localhost', # Replace with your MongoDB server address
+#             'host': '185.22.67.9', # Replace with your MongoDB server address
 #             'port': 27017,               # Replace with your MongoDB port if different
+#             'username': 'front_dev', # Replace with your MongoDB username (optional)
+#             'password': 'be65b9d4-1f56-40d3-ae1e-fed3ea1175d2', # Replace with your MongoDB password (optional)
+#             'authSource': 'front_service', # Replace with your MongoDB authentication database (optional)
 #         },
-#         'NAME': 'your_database_name',
+#         'NAME': 'front_service',
 #     }
 # }
+
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "djongo",
+#         "NAME": "engine",
+#         "ENFORCE_SCHEMA": False,
+#         "CLIENT": {
+#             "host": "185.22.67.9"
+#         },
+#     }
+# }
+
 
 
 # Password validation
